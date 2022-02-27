@@ -104,3 +104,8 @@ groceries = new Array ('SHugar', 'Paper', 'Pencil', 'Water');
 
 groceries[0] = 'salt';
  console.log(groceries);
+
+ // array common methods
+ console.log('to string', fruits.toString());
+ console.log(fruits.join(' * '));
+ console.log(fruits , fruits.pop(), fruits);
