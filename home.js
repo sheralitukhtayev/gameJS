@@ -1,4 +1,4 @@
 console.log('Hello!');
 console.log('Hello!');
 alert('Yoooo!');
-alert('')
+alert(' which one is better for 🍑 👩  🍌  🤵‍♂️ or')
