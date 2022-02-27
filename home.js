@@ -95,4 +95,12 @@ var fruits = ['Banana', 'Apple', 'Pineapple', 'Melon'];
 var fruits = new Array ('banana', 'apple', 'orange', 'pineApple');
 // console.log(fruits);
 
-alert (fruits[0]);
+fruits[1] = 'watermelon';
+
+console.log(fruits[1]);
+
+var gro = ['Cucumber', 'onion' , 'pear' , 'milk'];
+groceries = new Array ('SHugar', 'Paper', 'Pencil', 'Water');
+
+groceries[0] = 'salt';
+ console.log(groceries);
