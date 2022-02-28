@@ -108,4 +108,86 @@ groceries[0] = 'salt';
  // array common methods
  console.log('to string', fruits.toString());
  console.log(fruits.join(' * '));
- console.log(fruits , fruits.pop(), fruits);
+ console.log(fruits , fruits.pop(), fruits); //remove last item
+ console.log(fruits.push('blackberries'), fruits); //appends
+ console.log(fruits[3]);
+ fruits[fruits.length] = 'new fruit'; //same as push
+ console.log(fruits)
+ fruits.shift(); //remove first element
+ console.log(fruits)
+ fruits.unshift('kiwi');
+
+ let vegatables = ['asparagus','tomato', 'broccoli'];
+ console.log(vegatables)
+ let allGroveries = fruits.concat(vegatables);
+ console.log(allGroveries);
+ console.log(allGroveries.slice(1, 4));
+
+ let someNumbers = [5, 43, 232, 2, 232, 11, 12,134, 123, 112, 445, 56, 12, 675, 22, 37 ];
+//  console.log(someNumbers.filter());
+console.log(someNumbers.sort(function(a, b) {return a-b})); //sorted in ascending order
+console.log(someNumbers.sort(function(a, b) {return b-a})); //sorted in descending order
+
+let emptyArray = new Array();
+for (let num = 0; num < 10; num++) {
+  emptyArray.push(num)
+}
+console.log(emptyArray);
+
+
+let movie = Array()
+for (aa = 0; aa < 100; aa++) {
+  movie.push(aa)
+}
+console.log(movie);
+
+let film = Array()
+
+
+//Objects in Javascript
+let person = {
+                first: 'Sherali',
+                last: 'Tukhtayev',
+                age: 17,
+                height: 175,
+                Boolean: true,
+                infoAbout: function() {
+                  return 'firstName: ' + this.first + '\n' + 'lastName: ' + this.last + '\n' + 'age: ' + this.age + '\n' + 'height: ' + this.height + '\n';
+                }
+              };
+console.log(person);
+console.log(person.first);
+person.first = 'notSherali'; //changa value
+console.log(person.first);
+console.log(person.last);
+console.log(person.height);
+console.log(person.Boolean);
+console.log(person.age);
+person.age = 17
+var age = 17
+while( age < 100) {
+  age++;
+  console.log(person.age);
+}
+
+for(let age = 17; age < 100; age++) {
+  console.log(person.age);
+}
+console.log(person.infoAbout());
+
+
+// Conditionals, Control flows (if, else)
+//18-35 target demographic
+//&& is AND
+// || is OR
+var age = prompt('What is your age?');
+
+if ( (age >= 18) && (age <=35)) {
+  status  = 'You are valid for my course';
+  document.getElementById('age').innerHTML = status;
+  console.log(status)
+} else {
+  status = 'You are invalid for my course';
+  document.getElementById('age').innerHTML = status;
+  console.log(status);
+}
