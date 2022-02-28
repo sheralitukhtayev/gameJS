@@ -10,16 +10,21 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <button class="btn btn-success" onclick="age()">Your age</button>
-    <h1 id="someText"></h1>
-
-    <button class="btn btn-danger" onclick="greeting()" style="display: block; margin-top: 30px;">Greeting</button>
-    <h1 id="greeting"></h1>
-
-    <button class="btn btn-warning" onclick="sumNumbers">3 numbers</button>
-    <h1 id="fun"></h1>
-
-    <h1 id="age"> </h1>
-    <script src="home.js"></script>
+    <script>
+      let students = `[
+          {
+            "name": "Sherali",
+            "age": 17,
+            "height": 175
+          },
+          {
+            "name": "Forever",
+            "age": 19,
+            "height": 199
+          }
+        ]`
+        // console.log(JSON.parse(students)[1].name);
+        console.log(JSON.parse(students)[1].name);
+    </script>
   </body>
 </html>
