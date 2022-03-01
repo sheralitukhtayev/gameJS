@@ -27,5 +27,10 @@ function rpsGame(YourChoise) {
   // humanChoise = YourChoise.id;
   // botChoise =
   // result = decideWinner(humanChoise, botChoise) //[1, 0] human win | bot lost
-  message = finalMessage[result];
+  // message = finalMessage[result]; //{message: 'You win!', 'color': 'green'}
+  rpsFrontEnd(YourChoise.id, botChoise, message);
+}
+
+function randomRpsint() {
+  return Math.floor(Math.random() * 3);
 }
