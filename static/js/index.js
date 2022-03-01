@@ -19,3 +19,7 @@ function generateImg() {
   image.src = 'https://picsum.photos/200';
   div.appendChild(image);
 }
+
+function img() {
+
+}

@@ -1,11 +1,11 @@
-.container-1 {
+.container-1 , .container-2, .container-3{
   border: 1px solid #000;
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
 
-.flex-box-container-1 {
+.flex-box-container-1 , .flex-box-container-2, .flex-box-container-3{
   display: flex;
   border: 1px solid #000;
   padding: 10px;
@@ -19,22 +19,16 @@
   border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.container-2 {
-  border: 1px solid red;
-  width: 75%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.flex-box-container-2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  border: 1px solid blue;
-}
-
 .flex-box-container-2 img {
-  border: 1px solid green;
-  margin: 10px;
-  box-shadow: 10px 10px 30px black;
+  margin: 10px 5px;
+  box-shadow: 10px 10px 30px #000;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.flex-box-container-3 img {
+  width: 30%;
+}
+
+.flex-box-container-3 img:hover {
+  box-shadow: 0px 0px 30px blue;
 }
