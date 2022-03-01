@@ -30,5 +30,5 @@
 }
 
 .flex-box-container-3 img:hover {
-  box-shadow: 0px 0px 30px blue;
+  box-shadow: 0px 10px 50px rgba(37, 58, 233, 1);
 }
