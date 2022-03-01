@@ -20,6 +20,12 @@ function generateImg() {
   div.appendChild(image);
 }
 
-function img() {
-
+//Challenge 3: Rock, Paper, Scissors
+function rpsGame(YourChoise) {
+  console.log(YourChoise.id);
+  var humanChoise, botChoise;
+  // humanChoise = YourChoise.id;
+  // botChoise =
+  // result = decideWinner(humanChoise, botChoise) //[1, 0] human win | bot lost
+  message = finalMessage[result];
 }
