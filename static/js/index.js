@@ -22,15 +22,34 @@ function generateImg() {
 
 //Challenge 3: Rock, Paper, Scissors
 function rpsGame(YourChoise) {
-  console.log(YourChoise.id);
+  console.log('Human Choise: ' ,YourChoise.id);
   var humanChoise, botChoise;
-  // humanChoise = YourChoise.id;
-  // botChoise =
-  // result = decideWinner(humanChoise, botChoise) //[1, 0] human win | bot lost
+  humanChoise = YourChoise.id;
+  botChoise = numberToChoise(randToRpsInt());
+  console.log('Computer Choise: ',botChoise);
+  result = decideWinner(humanChoise, botChoise) //[1, 0] human win | bot lost
+  console.log(result);
   // message = finalMessage[result]; //{message: 'You win!', 'color': 'green'}
-  rpsFrontEnd(YourChoise.id, botChoise, message);
+  // rpsFrontEnd(YourChoise.id, botChoise, message);
 }
 
-function randomRpsint() {
+function randToRpsInt() {
   return Math.floor(Math.random() * 3);
+}
+
+function numberToChoise(number) {
+  return['rock','paper','scissors'][number];
+}
+
+function decideWinner(YourChoise, botChoise) {
+  var rpsDataBase = {
+    'rock' : {'scissors': 1, 'rock': 0.5, 'paper': 0},
+    'paper': {'scissors': 0, 'rock': 1, 'paper': 0.5},
+    'scissors': {'scissors': 0.5, 'rock': 0, 'paper': 1}
+  };
+
+  var yourScore = rpsDataBase[YourChoise][botChoise];
+  var computerScore = rpsDataBase[botChoise][YourChoise];
+
+  return[yourScore, computerScore];
 }
