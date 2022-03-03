@@ -26,7 +26,7 @@
     </div>
     <div class="container-2">
       <h2>Challenge 2: Image Generator</h2>
-      <button class="btn btn-success" id="GenerateImg" onclick="generateImg()">Generate Image</button>
+      <button class="btn btn-success"  onclick="generateImg()">Generate Image</button>
       <div class="flex-box-container-2" id="flex-cat-generator"></div>
     </div>
     <div class="container-3">
@@ -35,6 +35,23 @@
         <img onclick="rpsGame(this)" src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296854_960_720.png" alt="" onclick="" id="rock">
         <img onclick="rpsGame(this)" src="http://media.pixcove.com/F/4/8/Rock-Paper-Scissors-Hand-Paper-Free-Image-Gesture--3589.jpg" alt="" onclick="" id="paper">
         <img onclick="rpsGame(this)" src="https://thumbs.dreamstime.com/b/hand-two-fingers-up-hand-two-fingers-up-victory-peace-symbol-letter-v-sign-language-scissors-gesture-hand-drawn-116019432.jpg" alt="" onclick="" id="scissors">
+      </div>
+    </div>
+    <div class="container-4">
+      <h2 id="change-my-color">Challenge 4: Change the Color of All Buttons!</h2>
+      <div class="flex-box-container-4" id="flex-box-container-4">
+        <form action="">
+          <select name="backdrop" id="background" onchange="buttonColorChange(this)">
+            <option value="random">Random</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="reset">Reset</option>
+          </select>
+        </form>
+        <button class="btn btn-primary" id="button">Wee!</button>
+        <button class="btn btn-danger" id="button">Yahoo!</button>
+        <button class="btn btn-warning" id="button">Google!</button>
+        <button class="btn btn-success" id="button">Facebook!</button>
       </div>
     </div>
     <script src="static/js/index.js"></script>

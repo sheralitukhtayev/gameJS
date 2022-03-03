@@ -92,3 +92,25 @@ function rpsFrontEnd(humanImageChoise, botImageChoise, finalMessage) {
   document.getElementById('flex-box-container-3').appendChild(messageDiv);
   document.getElementById('flex-box-container-3').appendChild(botDiv);
 }
+
+//Challenge 4: Change colors of buttons
+var all_buttons = document.getElementsByTagName('button');
+
+var copyAllButtons = [];
+for (let i=0; i < all_buttons.length; i++) {
+  copyAllButtons.push(all_buttons[i]);
+}
+
+
+
+function buttonColorChange(buttonThingy) {
+  if(buttonThingy.value === 'red') {
+    buttonRed();
+  } else if(buttonThingy.value === 'green') {
+    buttonGreen();
+  } else if(buttonThingy.value === 'reset') {
+    buttonReset();
+  } else {
+    buttonRandom();
+  }
+}
