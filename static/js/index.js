@@ -84,10 +84,11 @@ function rpsFrontEnd(humanImageChoise, botImageChoise, finalMessage) {
   var botDiv = document.createElement('div');
   var messageDiv = document.createElement('div');
 
-  humanDiv.innerHTML = "<img src='" + imagesDataBase[humanImageChoise] + "' style = ' box-shadow: 0px 10px 50px rgba(37, 50, 233, 1)'>"
+  humanDiv.innerHTML = "<img src='" + imagesDataBase[humanImageChoise] + "' hieght = 150 width= 150 style = ' box-shadow: 0px 10px 50px rgba(37, 50, 233, 1)'>"
+  messageDiv.innerHTML = "<h1 style = 'color: " + finalMessage['color'] + "; font-size: 60px; padding: 30px; '>" + finalMessage['message'] + "</h1>"
+  botDiv.innerHTML = "<img src='" + imagesDataBase[botImageChoise] + "' hieght = 150 width= 150 style = 'box-shadow: 0px 10px 50px rgba(243, 38, 24, 1)' >"
 
-  document.getElementById('flex-box-rps-div').appendChild(humanDiv)
-
-  botDiv.innerHTML = "img src='" + imagesDataBase[botImageChoise] + "'> "
-  document.getElementById('flex-box-rps-div').appendChild(botDiv)
+  document.getElementById('flex-box-container-3').appendChild(humanDiv);
+  document.getElementById('flex-box-container-3').appendChild(messageDiv);
+  document.getElementById('flex-box-container-3').appendChild(botDiv);
 }
