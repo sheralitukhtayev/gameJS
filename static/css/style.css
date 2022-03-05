@@ -16,6 +16,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
+  background-image: url(../images/K.jpeg);
 }
 
 .flex-blackjack-row-1, .flex-blackjack-row-2 {

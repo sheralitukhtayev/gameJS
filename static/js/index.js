@@ -146,19 +146,19 @@ function randomColors() {
   }
 }
 
-//Challenge 5: Blackjacks (JavaScript)
+//Challenge 5: Blackjacks
 let blackjackGame = {
-  'you': {'scoreSpan': '#your-blackjack-result', 'div': '#your-box', 'score': 0},
-  'dealer': {'scoreSpan': '#dealer-blackjack-result', 'div': '#dealer-box', 'score': 0},
+  'you': {'scoreSpan': '#your-blackjack-score', 'div': '#your-box', 'score': 0},
+  'dealer': {'scoreSpan': '#dealer-blackjack-score', 'div': '#dealer-box', 'score': 0},
 };
 
-const YOU = blackjackGame['you'];
-const DEALER = blackjackGame['dealer'];
+const YOU = blackjackGame['you']
+const DEALER = blackjackGame['dealer']
 
 document.querySelector('#blackjack-hit-button').addEventListener('click', blackjackHit);
 
 function blackjackHit() {
   let cardImage = document.createElement('img');
-  cardImage.src = 'static/images/2.png';
+  cardImage.src = 'static/images/K.jpeg';
   document.querySelector(YOU['div']).appendChild(cardImage);
 }
