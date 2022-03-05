@@ -148,11 +148,17 @@ function randomColors() {
 
 //Challenge 5: Blackjacks (JavaScript)
 let blackjackGame = {
-  'you': {'scoreSpan': '#your-blackjack-result', 'div': '#your-box', 'score' :0},
-  'dealer': {'scoreSpan': '#dealer-blackjack-result', 'div': '#dealer-box', 'score' :0}
-}
-document.querySelector('#blackjack-hit-btn').addEventListener('click', blackjackHit);
+  'you': {'scoreSpan': '#your-blackjack-result', 'div': '#your-box', 'score': 0},
+  'dealer': {'scoreSpan': '#dealer-blackjack-result', 'div': '#dealer-box', 'score': 0},
+};
+
+const YOU = blackjackGame['you'];
+const DEALER = blackjackGame['dealer'];
+
+document.querySelector('#blackjack-hit-button').addEventListener('click', blackjackHit);
 
 function blackjackHit() {
-  alert('ooo, you just click Hit button!');
+  let cardImage = document.createElement('img');
+  cardImage.src = 'static/images/2.png';
+  document.querySelector(YOU['div']).appendChild(cardImage);
 }
