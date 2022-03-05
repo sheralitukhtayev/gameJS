@@ -147,16 +147,12 @@ function randomColors() {
 }
 
 //Challenge 5: Blackjacks (JavaScript)
+let blackjackGame = {
+  'you': {'scoreSpan': '#your-blackjack-result', 'div': '#your-box', 'score' :0},
+  'dealer': {'scoreSpan': '#dealer-blackjack-result', 'div': '#dealer-box', 'score' :0}
+}
 document.querySelector('#blackjack-hit-btn').addEventListener('click', blackjackHit);
-document.querySelector('#blackjack-stand-btn').addEventListener('click', blackjackStand);
-document.querySelector('#blackjack-deal-btn').addEventListener('click', blackjackDeal);
 
 function blackjackHit() {
   alert('ooo, you just click Hit button!');
-}
-function blackjackStand() {
-  alert('ooo, you just click Stand button');
-}
-function blackjackDeal() {
-  alert('ooo, you just click Deal button!');
 }
