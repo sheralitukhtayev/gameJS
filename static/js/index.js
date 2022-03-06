@@ -155,13 +155,24 @@ let blackjackGame = {
 const YOU = blackjackGame['you']
 const DEALER = blackjackGame['dealer']
 
-const hitSound = new Audio('static/sounds/hit.mp3');
+const hitSound = new Audio('static/sounds/hit.wav');
 
-document.querySelector('#button-hit').addEventListener('click', blackjackHit)
+document.querySelector('#button-hit').addEventListener('click', blackjackHit);
+
+document.querySelector('#button-deal').addEventListener('click', blackjackDeal);
 
 function blackjackHit() {
+  showCard(YOU);
+}
+
+function showCard(activePlayer) {
   let image = document.createElement('img');
   image.src = 'static/images/2.svg';
-  document.querySelector(YOU['div']).appendChild(image);
+  document.querySelector(activePlayer['div']).appendChild(image);
   hitSound.play();
+}
+
+function blackjackDeal() {
+  let yourImages = document.querySelector('#your-box').querySelectorAll('img');
+  alert(yourImages);
 }
