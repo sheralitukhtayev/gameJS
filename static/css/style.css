@@ -118,7 +118,7 @@ table th, td {
 
 .contant-1 div{
   border: 1px solid black;
-  width: 50%;
+  width: 75%;
   flex: 1;
   padding: 10px;
   height: 350px;
