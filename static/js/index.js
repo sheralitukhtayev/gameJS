@@ -159,6 +159,6 @@ document.querySelector('#blackjack-hit-button').addEventListener('click', blackj
 
 function blackjackHit() {
   let cardImage = document.createElement('img');
-  cardImage.src = 'static/images/K.jpeg';
-  document.querySelector(YOU['div']).appendChild(cardImage);
+  cardImage.src = 'static/images/CH.png';
+  document.querySelector(YOU["div"]).appendChild(cardImage);
 }
