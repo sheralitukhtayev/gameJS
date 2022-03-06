@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-.container-1 , .container-2, .container-3, .container-4, .container-5{
+.container-1 , .container-2, .container-3, .container-4, .container{
   border: 1px solid #000;
   width: 75%;
   margin: 0 auto;
@@ -9,7 +9,7 @@
 }
 
 .flex-box-container-1 , .flex-box-container-2, .flex-box-container-3, .flex-box-container-4, .flex-box-container-5 ,
-.flex-blackjack-row-1, .flex-blackjack-row-2, .flex-blackjack-row-3{
+.container-5-row-1, .flex-blackjack-row-2, .flex-blackjack-row-3{
   display: flex;
   border: 1px solid #000;
   padding: 10px;
@@ -19,7 +19,7 @@
 }
 
 .flex-blackjack-row-1, .flex-blackjack-row-2 {
-  background: url('https://media.istockphoto.com/photos/green-poker-table-felt-background-picture-id467583755?b=1&k=20&m=467583755&s=170667a&w=0&h=L_GLnugsN2RDrxjXPoBeUud9YGhQk7kKJIsgSgqRXdk=');
+  background: url('https://img.freepik.com/free-vector/poker-table-background-in-green-color_47243-1094.jpg?size=626&ext=jpg');
   color: #fff;
 }
 
@@ -71,4 +71,118 @@ table th, td {
 
 .flex-box-container-3 img:hover {
   box-shadow: 0px 10px 50px rgba(37, 58, 233, 1);
+}
+
+.container-5-row-1 {
+  background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.123rf.com%2Fstock-photo%2Fbridge_cards.html&psig=AOvVaw17OxVQ5o2wxQY3IGqmfs6A&ust=1646659560944000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJiFmYTLsfYCFQAAAAAdAAAAABAY');
+}
+
+.container-5-row-1 img {
+  width: 150px;
+}
+
+.container-5-row-1 div {
+  border: 1px solid black;
+  width: 50%;
+}
+
+.container-5-row-2 {
+  border: 1px solid ;
+}
+
+.container-5-row-3 {
+  border: 1px solid black;
+}
+.container-5-row-3 table{
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.contant-1 , .contant-2, .contant-3 {
+  display: flex;
+  border: 1px solid #000;
+  padding: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.contant-1, .contant-2 {
+  display: flex;
+  color: white;
+  background: url('https://media.istockphoto.com/photos/green-poker-table-felt-background-picture-id467583755?b=1&k=20&m=467583755&s=170667a&w=0&h=L_GLnugsN2RDrxjXPoBeUud9YGhQk7kKJIsgSgqRXdk=');
+}
+
+.contant-1 div{
+  border: 1px solid black;
+  width: 50%;
+  flex: 1;
+  padding: 10px;
+  height: 350px;
+  text-align: center;
+}
+
+.contant-1 img {
+  width: 25%;
+  padding: 100px;
+}
+
+.contant-2 button {
+  border: 1px solid black;
+}
+.contant-2 div{
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.contant-3 th, td {
+  padding: 3px;
+  border: 1px solid black;
+}
+
+.contant-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.contant-3-second {
+  display: flex;
+  background: url('https://media.istockphoto.com/photos/green-poker-table-felt-background-picture-id140020812?b=1&k=20&m=140020812&s=170667a&w=0&h=XwhGrKmADCoF5b7i4-znfFM0nCeK-gdyA61DsrOEXMk=');
+}
+
+.contant-3-table {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.contant-3-second div {
+  color: white;
+  border: 1px solid black;
+  width: 50%;
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.contant-3-second img {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin: 15px;
+  width: 100px;
+}
+
+.buttons {
+  border: 1px solid black;
+  display: flex;
+
+}
+
+.buttons button {
+  margin: 5px;
+  border: 1px solid black;
 }

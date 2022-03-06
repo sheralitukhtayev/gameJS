@@ -147,3 +147,21 @@ function randomColors() {
 }
 
 //Challenge 5: Blackjacks
+let blackjackGame = {
+  'you': {'scoreSpan': '#your-result', 'div': '#your-box', 'score': 0},
+  'dealer': {'scoreSpan': '#dealer-result', 'div': '#dealer-box', 'score': 0},
+};
+
+const YOU = blackjackGame['you']
+const DEALER = blackjackGame['dealer']
+
+const hitSound = new Audio('static/sounds/hit.mp3');
+
+document.querySelector('#button-hit').addEventListener('click', blackjackHit)
+
+function blackjackHit() {
+  let image = document.createElement('img');
+  image.src = 'static/images/2.svg';
+  document.querySelector(YOU['div']).appendChild(image);
+  hitSound.play();
+}
