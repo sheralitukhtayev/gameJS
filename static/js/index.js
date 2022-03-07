@@ -168,7 +168,6 @@ function blackjackHit() {
   let card = randomCard();
   console.log(card);
   showCard(card, YOU);
-  showCard(card, DEALER);
 }
 
 function randomCard() {
