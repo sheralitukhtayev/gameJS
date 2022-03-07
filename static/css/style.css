@@ -145,7 +145,8 @@ table th, td {
 .contant-3-second {
   display: flex;
   background: url('https://media.istockphoto.com/photos/gambling-chips-picture-id96270221?b=1&k=20&m=96270221&s=170667a&w=0&h=E0D190RzoaFA4JTnKCEuQJRhfl88Ks_2-unBPVL_DFY=');
-  width: 100%;
+  /* width: 100%; */
+  height: 450px;
 }
 
 .contant-3-table {
