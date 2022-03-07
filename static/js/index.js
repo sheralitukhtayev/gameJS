@@ -163,16 +163,25 @@ document.querySelector('#button-deal').addEventListener('click', blackjackDeal);
 
 function blackjackHit() {
   showCard(YOU);
+  showCard(DEALER);
 }
 
 function showCard(activePlayer) {
   let image = document.createElement('img');
-  image.src = 'static/images/2.svg';
+  image.src = 'static/images/Poker.png';
   document.querySelector(activePlayer['div']).appendChild(image);
   hitSound.play();
 }
 
 function blackjackDeal() {
   let yourImages = document.querySelector('#your-box').querySelectorAll('img');
-  alert(yourImages);
+  let dealerImages = document.querySelector('#dealer-box').querySelectorAll('img');
+
+  for (i = 0 ; i < yourImages.length; i++) {
+    yourImages[i].remove();
+  }
+
+  for (i = 0 ; i < dealerImages.length; i++) {
+    dealerImages[i].remove();
+  }
 }

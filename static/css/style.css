@@ -121,13 +121,7 @@ table th, td {
   width: 75%;
   flex: 1;
   padding: 10px;
-  height: 350px;
   text-align: center;
-}
-
-.contant-1 img {
-  width: 25%;
-  padding: 100px;
 }
 
 .contant-2 button {
