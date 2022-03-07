@@ -150,7 +150,7 @@ function randomColors() {
 let blackjackGame = {
   'you': {'scoreSpan': '#your-result', 'div': '#your-box', 'score': 0},
   'dealer': {'scoreSpan': '#dealer-result', 'div': '#dealer-box', 'score': 0},
-  'cards': ['3', '4', '5', '6', '7', '8', '9', 'Queen', 'King', 'Poker'],
+  'cards': ['2' ,'3', '4', '5', '6', '7', '8', '9', '10' , 'Jack' , 'Queen', 'King', 'Poker'],
 };
 
 const YOU = blackjackGame['you']
@@ -171,7 +171,7 @@ function blackjackHit() {
 }
 
 function randomCard() {
-  let randomIndex = Math.floor(Math.random() * 10);
+  let randomIndex = Math.floor(Math.random() * 13);
   return blackjackGame['cards'][randomIndex];
 }
 
