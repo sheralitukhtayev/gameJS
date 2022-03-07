@@ -174,7 +174,7 @@ table th, td {
 .buttons {
   border: 1px solid black;
   display: flex;
-
+  justify-content: center;
 }
 
 .buttons button {
