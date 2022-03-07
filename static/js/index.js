@@ -150,7 +150,7 @@ function randomColors() {
 let blackjackGame = {
   'you': {'scoreSpan': '#your-result', 'div': '#your-box', 'score': 0},
   'dealer': {'scoreSpan': '#dealer-result', 'div': '#dealer-box', 'score': 0},
-  'cards': ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'],
+  'cards': ['3', '4', '5', '6', '7', '8', '9', 'Queen', 'King', 'Poker'],
 };
 
 const YOU = blackjackGame['you']
@@ -165,13 +165,20 @@ document.querySelector('#button-deal').addEventListener('click', blackjackDeal);
 const dealSound = new Audio('')
 
 function blackjackHit() {
-  showCard(YOU);
-  showCard(DEALER);
+  let card = randomCard();
+  console.log(card);
+  showCard(card, YOU);
+  showCard(card, DEALER);
 }
 
-function showCard(activePlayer) {
+function randomCard() {
+  let randomIndex = Math.floor(Math.random() * 10);
+  return blackjackGame['cards'][randomIndex];
+}
+
+function showCard(card, activePlayer) {
   let image = document.createElement('img');
-  image.src = 'static/images/Poker.png';
+  image.src = `static/images/${card}.png`;
   document.querySelector(activePlayer['div']).appendChild(image);
   hitSound.play();
 }
