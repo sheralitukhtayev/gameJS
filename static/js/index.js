@@ -151,6 +151,7 @@ let blackjackGame = {
   'you': {'scoreSpan': '#your-result', 'div': '#your-box', 'score': 0},
   'dealer': {'scoreSpan': '#dealer-result', 'div': '#dealer-box', 'score': 0},
   'cards': ['2' ,'3', '4', '5', '6', '7', '8', '9', '10' , 'Jack' , 'Queen', 'King', 'Poker'],
+  'cardsMap': {'2':2 ,'3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, '10':10 , 'Jack':10 , 'Queen':10, 'King':10, 'Poker': [1]},
 };
 
 const YOU = blackjackGame['you']
@@ -168,6 +169,9 @@ function blackjackHit() {
   let card = randomCard();
   console.log(card);
   showCard(card, YOU);
+  updateScore(card, YOU);
+  showScore(YOU);
+  console.log(YOU['score']);
 }
 
 function randomCard() {
@@ -176,10 +180,12 @@ function randomCard() {
 }
 
 function showCard(card, activePlayer) {
+  if(activePlayer['score']<=21) {
   let image = document.createElement('img');
   image.src = `static/images/${card}.png`;
   document.querySelector(activePlayer['div']).appendChild(image);
   hitSound.play();
+  }
 }
 
 function blackjackDeal() {
@@ -192,5 +198,33 @@ function blackjackDeal() {
 
   for (i = 0 ; i < dealerImages.length; i++) {
     dealerImages[i].remove();
+  }
+
+  YOU['score'] = 0;
+  DEALER['score'] = 0;
+
+  document.querySelector('#your-black-score').textContent = 0;
+}
+
+function updateScore(card, activePlayer) {
+  if (card === 'A'){
+  //If adding 11 keeps me below 21, add 11. Otherwisw, add 1
+    if(activePlayer['score'] + blackjackGame['cardsMap'][card][1] <= 21) {
+      activePlayer['score'] += blackjackGame['cardsMap'][card][1];
+    } else {
+      activePlayer['score'] += blackjackGame['cardsMap'][card][0];
+    }
+
+  } else {
+    activePlayer['score'] += blackjackGame['cardsMap'][card];
+  }
+}
+
+function showScore(activePlayer) {
+  if(activePlayer['score'] > 21 ) {
+    document.querySelector(activePlayer['scoreSpan']).textContent = 'BUST!';
+    document.querySelector(activePlayer['scoreSpan']).style.color = 'red';
+  } else {
+    document.querySelector(activePlayer['scoreSpan']).textContent = activePlayer['score'];
   }
 }
