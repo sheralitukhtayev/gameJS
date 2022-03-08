@@ -241,4 +241,38 @@ function dealerLogic() {
   showCard(card, DEALER);
   updateScore(card, DEALER);
   showScore(DEALER);
+  computerWinner();
 }
+
+//Computer wins and return who just won
+
+function computerWinner() {
+  let winner;
+
+  if(YOU['score'] <= 21) {
+    //Condition : higher score than dealer or when dealer busts but you're 21 or under
+    if (YOU['score'] > DEALER['score'] || (DEALER['score'] > 21)) {
+      console.log('You won!');
+      winner = YOU;
+    } else if (YOU['score'] < DEALER['score']) {
+      console.log('You lost!')
+      winner = DEALER;
+    } else if (YOU['score'] === DEALER['score']) {
+      console.log('You drew!')
+    }
+
+    //condition: When you busts but dealer doesn't
+  } else if (YOU['score'] > 21 && DEALER['score'] <= 21) {
+    console.log('You lost!');
+    winner = DEALER;
+
+  // condition: when you AND the dealer busts
+  } else if (YOU['score'] > 21 && DEALER['score'] > 21) {
+    console.log('You drew!');
+  }
+
+  console.log('Winner is ' , winner);
+  return winner;
+}
+
+showResult(wi)
