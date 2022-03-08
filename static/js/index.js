@@ -161,6 +161,8 @@ const hitSound = new Audio('static/sounds/hit.wav');
 
 document.querySelector('#button-hit').addEventListener('click', blackjackHit);
 
+document.querySelector('#button-stand').addEventListener('click', dealerLogic  );
+
 document.querySelector('#button-deal').addEventListener('click', blackjackDeal);
 
 const dealSound = new Audio('')
@@ -192,6 +194,10 @@ function blackjackDeal() {
   let yourImages = document.querySelector('#your-box').querySelectorAll('img');
   let dealerImages = document.querySelector('#dealer-box').querySelectorAll('img');
 
+
+  document.querySelector('#your-result').style.color  = '#ffffff';
+  document.querySelector('#dealer-result').style.color  = '#ffffff';
+
   for (i = 0 ; i < yourImages.length; i++) {
     yourImages[i].remove();
   }
@@ -203,7 +209,8 @@ function blackjackDeal() {
   YOU['score'] = 0;
   DEALER['score'] = 0;
 
-  document.querySelector('#your-black-score').textContent = 0;
+  document.querySelector('#your-result').textContent = 0;
+  document.querySelector('#dealer-result').textContent = 0;
 }
 
 function updateScore(card, activePlayer) {
@@ -227,4 +234,11 @@ function showScore(activePlayer) {
   } else {
     document.querySelector(activePlayer['scoreSpan']).textContent = activePlayer['score'];
   }
+}
+
+function dealerLogic() {
+  let card = randomCard();
+  showCard(card, DEALER);
+  updateScore(card, DEALER);
+  showScore(DEALER);
 }
