@@ -191,6 +191,7 @@ function showCard(card, activePlayer) {
 }
 
 function blackjackDeal() {
+  showResult(computerWinner());
   let yourImages = document.querySelector('#your-box').querySelectorAll('img');
   let dealerImages = document.querySelector('#dealer-box').querySelectorAll('img');
 
@@ -241,7 +242,6 @@ function dealerLogic() {
   showCard(card, DEALER);
   updateScore(card, DEALER);
   showScore(DEALER);
-  computerWinner();
 }
 
 //Computer wins and return who just won
@@ -275,4 +275,20 @@ function computerWinner() {
   return winner;
 }
 
-showResult(wi)
+function showResult(winner) {
+  let message, messageColor ;
+
+  if (winner === YOU) {
+    message = 'You won!';
+    messageColor = 'black';
+  } else if(winner === DEALER) {
+    message = 'You lost!';
+    messageColor = 'red';
+  } else {
+    message = 'You drew';
+    messageColor = 'black';
+  }
+
+  document.querySelector('#blackjack-result').textContent = message;
+  document.querySelector('#blackjack-result').style.color = messageColor;
+}
