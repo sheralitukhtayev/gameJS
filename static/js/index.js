@@ -152,6 +152,9 @@ let blackjackGame = {
   'dealer': {'scoreSpan': '#dealer-result', 'div': '#dealer-box', 'score': 0},
   'cards': ['2' ,'3', '4', '5', '6', '7', '8', '9', '10' , 'Jack' , 'Queen', 'King', 'Poker'],
   'cardsMap': {'2':2 ,'3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, '10':10 , 'Jack':10 , 'Queen':10, 'King':10, 'Poker': 1},
+  'wins' : 0,
+  'losses' : 0,
+  'drews' : 0,
 };
 
 const YOU = blackjackGame['you']
@@ -244,36 +247,41 @@ function dealerLogic() {
   showCard(card, DEALER);
   updateScore(card, DEALER);
   showScore(DEALER);
+
+  if(DEALER['score']) {
+    let winner = computerWinner();
+    showResult(winner);
+  }
 }
 
 //Computer wins and return who just won
-
+//update the wins,drews,losses
 function computerWinner() {
   let winner;
 
   if(YOU['score'] <= 21) {
     //Condition : higher score than dealer or when dealer busts but you're 21 or under
     if (YOU['score'] > DEALER['score'] || (DEALER['score'] > 21)) {
-      console.log('You won!');
+      blackjackGame['wins']++;
       winner = YOU;
     } else if (YOU['score'] < DEALER['score']) {
-      console.log('You lost!')
+      blackjackGame['losses']++;
       winner = DEALER;
     } else if (YOU['score'] === DEALER['score']) {
-      console.log('You drew!')
+      blackjackGame['drews']++;
     }
 
     //condition: When you busts but dealer doesn't
   } else if (YOU['score'] > 21 && DEALER['score'] <= 21) {
-    console.log('You lost!');
+    blackjackGame['losses']++;
     winner = DEALER;
 
   // condition: when you AND the dealer busts
   } else if (YOU['score'] > 21 && DEALER['score'] > 21) {
-    console.log('You drew!');
+    blackjackGame['drews'];
   }
 
-  console.log('Winner is ' , winner);
+  console.log(blackjackGame);
   return winner;
 }
 
@@ -281,6 +289,7 @@ function showResult(winner) {
   let message, messageColor ;
 
   if (winner === YOU) {
+    document.querySelector('')
     message = 'You won!';
     messageColor = 'green';
   } else if(winner === DEALER) {
