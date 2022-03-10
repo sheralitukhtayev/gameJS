@@ -191,7 +191,9 @@ function showCard(card, activePlayer) {
 }
 
 function blackjackDeal() {
-  showResult(computerWinner());
+  let winner = computerWinner();
+  showResult(winner);
+  // showResult(computerWinner());
   let yourImages = document.querySelector('#your-box').querySelectorAll('img');
   let dealerImages = document.querySelector('#dealer-box').querySelectorAll('img');
 
@@ -280,7 +282,7 @@ function showResult(winner) {
 
   if (winner === YOU) {
     message = 'You won!';
-    messageColor = 'black';
+    messageColor = 'green';
   } else if(winner === DEALER) {
     message = 'You lost!';
     messageColor = 'red';
